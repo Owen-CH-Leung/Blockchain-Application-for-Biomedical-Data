@@ -1,0 +1,34 @@
+name: test-network-org${ORG}
+version: 1.0.0
+client:
+  organization: ${ORG}Hospital
+  connection:
+    timeout:
+      peer:
+        endorser: '300'
+organizations:
+  ${ORG}Hospital:
+    mspid: ${ORG}HospitalMSP
+    peers:
+    - peer0.${ORG}Hospital.com
+    certificateAuthorities:
+    - ca.org${ORG_IDX}.example.com
+peers:
+  peer0.${ORG}Hospital.com:
+    url: grpcs://localhost:${P0PORT}
+    tlsCACerts:
+      pem: |
+          ${PEERPEM}
+    grpcOptions:
+      ssl-target-name-override: peer0.${ORG}Hospital.com
+      hostnameOverride: peer0.${ORG}Hospital.com
+certificateAuthorities:
+  ca.org${ORG_IDX}.example.com:
+    url: https://localhost:${CAPORT}
+    caName: ca-${ORG}Hospital
+    tlsCACerts:
+      pem: 
+        - |
+          ${CAPEM}
+    httpOptions:
+      verify: false

@@ -1,0 +1,285 @@
+<!-- doctor_pci_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>PCI Form (Edit Mode)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+	
+
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>PCI Form <span style="color:blue">(Edit Mode)</span></h3>
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form action="http://localhost:7777/pci" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<div class="accordion" id="accordion_group" style="margin-bottom: 50px">
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="staff_info">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_staff_info"
+        aria-expanded="false"
+        aria-controls="collapse_staff_info"
+      >
+        Clinician Information
+      </button>
+    </h2>
+    <div
+      id="collapse_staff_info"
+      class="accordion-collapse collapse"
+      aria-labelledby="staff_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="DoctorID" name="DoctorID">
+		  <label class="form-label" for="DoctorID">Doctor ID</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Hospital" name="Hospital">
+		  <label class="form-label" for="Hospital">Hospital</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="DoctorName" name="DoctorName">
+		  <label class="form-label" for="DoctorName">Doctor Name</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="Specialty" name="Specialty">
+		  <label class="form-label" for="Specialty">Specialty</label>
+		</div>		
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="patient_info">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_patient_info"
+        aria-expanded="false"
+        aria-controls="collapse_patient_info"
+      >
+        Patient Information
+      </button>
+    </h2>
+    <div
+      id="collapse_patient_info"
+      class="accordion-collapse collapse"
+      aria-labelledby="patient_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="FullName" name="FullName">
+		  <label class="form-label" for="FullName">Patient Name</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Gender" name="Gender">
+		  <label class="form-label" for="Gender">Gender</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="HKID" name="HKID">
+		  <label class="form-label" for="HKID">HKID</label>
+		</div>
+	    <label>Date of Birth</label><input class="form-control" type="date" id="DOB" name="DOB" style="width:360px; margin-bottom:30px">
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="Email" name="Email">
+		  <label class="form-label" for="Email">Email</label>
+		</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="risk_factor">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_risk_factor"
+        aria-expanded="false"
+        aria-controls="collapse_risk_factor"
+      >
+        Risk Factor
+      </button>
+    </h2>
+    <div
+      id="collapse_risk_factor"
+      class="accordion-collapse collapse"
+      aria-labelledby="risk_factor"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="PreviousPCI" name="PreviousPCI">
+		  <label class="form-label" for="PreviousPCI">Previous PCI</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="VascularDiseases" name="VascularDiseases">
+		  <label class="form-label" for="VascularDiseases">Vascular Diseases</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="DiabetesMelilites" name="DiabetesMelilites">
+		  <label class="form-label" for="DiabetesMelilites">Diabetes Melilites</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Hypertension" name="Hypertension">
+		  <label class="form-label" for="Hypertension">Hypertension</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="SmokeHistory" name="SmokeHistory">
+		  <label class="form-label" for="SmokeHistory">Smoking History</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="pre_status">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_pre_status"
+        aria-expanded="false"
+        aria-controls="collapse_pre_status"
+      >
+        Pre-Intervention Status
+      </button>
+    </h2>
+    <div
+      id="collapse_pre_status"
+      class="accordion-collapse collapse"
+      aria-labelledby="pre_status"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="AnginaType" name="AnginaType">
+		  <label class="form-label" for="AnginaType">Angina Type</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="HeartFailure" name="HeartFailure">
+		  <label class="form-label" for="HeartFailure">Heart Failure</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="EjectionFraction" name="EjectionFraction">
+		  <label class="form-label" for="EjectionFraction">Ejection Fraction (in %)</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="px_summary">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_px_summary"
+        aria-expanded="false"
+        aria-controls="collapse_px_summary"
+      >
+        Procedure Summary
+      </button>
+    </h2>
+    <div
+      id="collapse_px_summary"
+      class="accordion-collapse collapse"
+      aria-labelledby="px_summary"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+	    <label>Procedure Date</label>
+	    <input class="form-control" type="datetime-local" id="ProcedureDate" name="ProcedureDate" style="width:360px; margin-bottom:30px">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Urgency" name="Urgency">
+		  <label class="form-label" for="Urgency">Urgency</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Result" name="Result">
+		  <label class="form-label" for="Result">Result</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Device" name="Device">
+		  <label class="form-label" for="Device">Device</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="Type" name="Type">
+		  <label class="form-label" for="Type">Type</label>
+		</div>
+	  </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="complication">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_complication"
+        aria-expanded="false"
+        aria-controls="collapse_complication"
+      >
+        Complication
+      </button>
+    </h2>
+    <div
+      id="collapse_complication"
+      class="accordion-collapse collapse"
+      aria-labelledby="complication"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Death" name="Death">
+		  <label class="form-label" for="Death">Death within 30 days (Yes/No)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Stroke" name="Stroke">
+		  <label class="form-label" for="Stroke">Stroke within 30 days (Yes/No)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="HeartFailure" name="HeartFailure">
+		  <label class="form-label" for="HeartFailure">Heart Failure within 30 days (Yes/No)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <textarea class="form-control" rows="6" id="OtherSymptoms" name="OtherSymptoms"></textarea>
+		  <label class="form-label" for="OtherSymptoms">Other Symptoms</label>
+		</div>
+	  </div>
+    </div>
+  </div>
+  
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

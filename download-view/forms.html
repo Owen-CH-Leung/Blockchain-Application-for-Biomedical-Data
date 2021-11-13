@@ -1,0 +1,72 @@
+<!-- forms.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <script src="./style/bootstrap.min.js"></script>
+
+    <title>Download Medical Record</title>
+  </head>
+  <body>
+	<div class="container" style="margin-left:15px">
+		<div class="row">
+			<div class="">
+			  <img src="./style/icon.png"></img>
+			  <h3>Download Medical Record</h3>
+			  
+			  <div class="panel panel-default" style="margin-top:30px">
+				<div class="panel-body">
+				  <form enctype="multipart/form-data" action="http://localhost:9999" method="post">
+					<div class="form-group">
+						<label>Patient's HKID No.</label>
+						<input type="text" name="HKID" class="form-control" placeholder="A1234567">
+					</div>
+					
+					<div class="form-group">
+						<label>Email for receiving the medical record</label>
+						<input type="text" name="Email" class="form-control" placeholder="abc@gmail.com">
+					</div>
+
+					
+					<div class="form-group">
+						<label>Upload your Private Key File</label><br>
+						<input type="file" name="Keyfile"/>
+					</div>
+
+					<div class="form-group" style="margin-top:30px">
+					  <h5>Data Selection Criteria</h5>
+					  
+					  <h6>Select Period:</h6>
+					  <label for="date_from">From:</label>
+					  <input type="date" id="date_from">
+					  <label for="date_from">Date To:</label>
+					  <input type="date" id="date_to"><br>
+					  
+						<script language="javascript" type="text/javascript">
+							document.getElementById('date_to').valueAsDate = new Date();
+						</script>
+					  
+					  <h6>Select Data Type:</h6>
+					  <input type="checkbox" id="data_chestpain" value="data_chestpain">
+					  <label for="data_chestpain">Chest Pain Data</label>&emsp;&emsp;
+					  <input type="checkbox" id="data_chestxrayimage" value="data_chestxrayimage">
+					  <label for="data_chestxrayimage">Chest X-Ray Images</label><br>
+					  <input type="checkbox" id="data_covidvaccine" value="data_covidvaccine">
+					  <label for="data_covidvaccine">COVID-19 Vaccination Records</label>
+					</div>
+					
+					<div style="margin-top:30px">
+						<button onclick="alert('Your request is successfully submitted!\nYour medical record will be sent to your email.')" 
+						        type="submit" value="Submit" class="btn btn-block btn-primary">Submit</button>
+					</div>
+				  </form>
+				</div>
+			  </div><!--.panel-->
+			</div><!--.cols-->
+		</div><!--.row-->
+	</div><!--.container-->
+  </body>
+</html>

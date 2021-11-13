@@ -1,0 +1,69 @@
+<!-- researcher.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Download Form (Role: Researcher)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+    <script language="javascript" type="text/javascript">
+    function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('type')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+    </script>
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Download Form (Role: <span style="color:blue">Researcher</span>)
+		</div>
+		<div class="panel panel-default" style="margin-top:30px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form enctype="multipart/form-data" action="http://localhost:9999/researcher" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+
+<div class="form-outline" style="width:360px; margin-bottom:30px">
+  <input class="form-control" type="text" id="Email" name="Email">
+  <label class="form-label" for="Email">Email for receiving the medical record</label>
+</div>
+
+<h5>Data Selection Criteria</h5>
+	  
+<h6 style="margin-top:20px; margin-bottom:10px">Select Period:</h6>
+<label for="date_from">From:</label>
+<input type="date" id="date_from" name="date_from">
+<label for="date_from">Date To:</label>
+<input type="date" id="date_to" name="date_to"><br>
+
+<script language="javascript" type="text/javascript">
+	document.getElementById('date_to').valueAsDate = new Date();
+</script>
+
+<h6 style="margin-top:20px; margin-bottom:10px">Select Data Type:</h6>
+<div class="form-check" style="margin-bottom:30px">
+	<input class="form-check-input" type="checkbox" name="choice" id="data_chestpain" value="data_chestpain">
+	<label for="data_chestpain">COVID-19 Data</label>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

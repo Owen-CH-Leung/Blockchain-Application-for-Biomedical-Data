@@ -1,0 +1,84 @@
+<!-- main.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Main Form (Ingestion)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+    <script language="javascript" type="text/javascript">
+    function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('type')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+    </script>
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Main Form (Ingestion)</h3>
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form action="http://localhost:7777/" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<div class="accordion" id="accordion_group" style="margin-bottom: 50px">
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="data_type">
+      <button
+        class="accordion-button show"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_data_type"
+        aria-expanded="true"
+        aria-controls="collapse_data_type"
+      >
+        Select Action
+      </button>
+    </h2>
+    <div
+      id="collapse_data_type"
+      class="accordion-collapse show"
+      aria-labelledby="data_type"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-check" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="type" id="create" value="create" onclick="onlyOne(this)">
+			<label for="create">Push New Record To Blockchain</label>
+		</div>
+		<div class="form-check" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="type" id="update" value="update" onclick="onlyOne(this)">
+			<label for="update">Created an updated Record</label>
+		</div>
+		<div class="form-check" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="type" id="push_update" value="push_update" onclick="onlyOne(this)">
+			<label for="push_update">Push the updated Record to Blockchain</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

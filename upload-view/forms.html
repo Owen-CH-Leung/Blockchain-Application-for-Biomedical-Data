@@ -1,0 +1,58 @@
+<!-- forms.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <script src="./style/bootstrap.min.js"></script>
+    <title>Upload Medical Record</title>
+  </head>
+  <body>
+	<div class="container" style="margin-left:15px">
+		<div class="row">
+			<div class="col-xs-11 col-sm-8 col-md-5 col-lg-4 ">
+			  <img src="./style/icon.png"></img>
+			  <h3>Upload Medical Record</h3>
+			  
+			  <div class="panel panel-default" style="margin-top:30px">
+				<div class="panel-body">
+				  <form enctype="multipart/form-data" action="http://localhost:8888" method="post">
+					
+					<div class="form-group">
+						<label>Patient Name</label>
+						<input type="text" name="FullName" class="form-control" placeholder="Your Name">
+					</div>
+
+					<div class="form-group">
+						<label>HKID No.</label>
+						<input type="text" name="HKID" class="form-control" placeholder="A1234567">
+					</div>
+					
+					<div class="form-group">
+						<label>Patient Email</label>
+						<input type="text" name="Email" class="form-control" placeholder="abc@gmail.com">
+					</div>
+
+					<div class="form-group">
+						<label>Medical Notes</label>
+						<textarea name="MedicalNotes" class="form-control" style="min-height:150px"></textarea>
+					</div>
+					
+					<div class="form-group">
+						<label>Select your Chest XRay image</label>
+						<input type="file" name="ChestXRay"/>
+					</div>
+					<div style="margin-top:30px">
+						<button onclick="alert('Your medical record is successfully uploaded to the system!\nKeys will be sent to your email.')"
+						        type="submit" value="Submit" class="btn btn-block btn-primary">Submit</button>
+					</div>
+				  </form>
+				</div>
+			  </div><!--.panel-->
+			</div><!--.cols-->
+		</div><!--.row-->
+	</div><!--.container-->
+  </body>
+</html>

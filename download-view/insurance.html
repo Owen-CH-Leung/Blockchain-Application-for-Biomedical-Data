@@ -1,0 +1,124 @@
+<!-- insurance.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Download Form (Role: Insurance Practitioner)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+    <script language="javascript" type="text/javascript">
+    function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('type')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+    </script>
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Download Form (Role: <span style="color:blue">Insurance Practitioner</span>)
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form enctype="multipart/form-data" action="http://localhost:9999/insurance" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<div class="accordion" id="accordion_group" style="margin-bottom: 50px">
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="patient_info">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_patient_info"
+        aria-expanded="false"
+        aria-controls="collapse_patient_info"
+      >
+        Patient Details
+      </button>
+    </h2>
+    <div
+      id="collapse_patient_info"
+      class="accordion-collapse collapse"
+      aria-labelledby="patient_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="HKID" name="HKID">
+		  <label class="form-label" for="HKID">Patient's HKID No.</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Email" name="Email">
+		  <label class="form-label" for="Email">Email for receiving the medical record</label>
+		</div>
+		<label class="form-label" >Upload patient's Private Key File:</label>
+	    <input class="form-control" type="file" id="Keyfile" name="Keyfile" style="width:360px; margin-bottom:10px">
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="data_type">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_data_type"
+        aria-expanded="false"
+        aria-controls="collapse_data_type"
+      >
+        Select Data Type
+      </button>
+    </h2>
+    <div
+      id="collapse_data_type"
+      class="accordion-collapse collapse"
+      aria-labelledby="data_type"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-check" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="choice" id="chestpainreferral" value="chestpainreferral">
+			<label for="chestpainreferral">Chest Pain Referal Details</label>
+		</div>
+		<div class="form-check" style="margin-bottom:30px">
+			<input class="form-check-input" type="checkbox" name="choice" id="procedure" value="procedure">
+			<label for="procedure">Procedure</label>
+		</div>
+		
+		<h6>Select Data Duration:</h6>
+		<div class="form-check form-check-inline" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="type" id="latest" value="latest" onclick="onlyOne(this)">
+			<label for="latest">Latest Record</label>
+		</div>
+		<div class="form-check form-check-inline" style="margin-bottom:10px">
+			<input class="form-check-input" type="checkbox" name="type" id="history" value="history" onclick="onlyOne(this)">
+			<label for="history">All historical records</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,244 @@
+<!-- ah_diet_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Dietetics Assessment Form (Edit Mode)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />	
+
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Dietetics Assessment Form <span style="color:blue">(Edit Mode)</span></h3>
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form action="http://localhost:7777/diet" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<div class="accordion" id="accordion_group" style="margin-bottom: 50px">
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="staff_info">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_staff_info"
+        aria-expanded="false"
+        aria-controls="collapse_staff_info"
+      >
+        Allied Health Staff Information
+      </button>
+    </h2>
+    <div
+      id="collapse_staff_info"
+      class="accordion-collapse collapse"
+      aria-labelledby="staff_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="NurseID" name="NurseID">
+		  <label class="form-label" for="NurseID">Staff ID</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Hospital" name="Hospital">
+		  <label class="form-label" for="Hospital">Hospital</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="NurseName" name="NurseName">
+		  <label class="form-label" for="NurseName">Staff Name</label>
+		</div>
+		
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="patient_info">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_patient_info"
+        aria-expanded="false"
+        aria-controls="collapse_patient_info"
+      >
+        Patient Information
+      </button>
+    </h2>
+    <div
+      id="collapse_patient_info"
+      class="accordion-collapse collapse"
+      aria-labelledby="patient_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="FullName" name="FullName">
+		  <label class="form-label" for="FullName">Patient Name</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Gender" name="Gender">
+		  <label class="form-label" for="Gender">Gender</label>
+		</div>
+	    <label>Date of Birth</label><input class="form-control" type="date" id="DOB" name="DOB" style="width:360px; margin-bottom:30px">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="ContactNumber" name="ContactNumber">
+		  <label class="form-label" for="ContactNumber">Contact Number</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Email" name="Email">
+		  <label class="form-label" for="Email">Email</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="HKID" name="HKID">
+		  <label class="form-label" for="HKID">HKID</label>
+		</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="risk_factor">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_risk_factor"
+        aria-expanded="false"
+        aria-controls="collapse_risk_factor"
+      >
+        Risk Factor
+      </button>
+    </h2>
+    <div
+      id="collapse_risk_factor"
+      class="accordion-collapse collapse"
+      aria-labelledby="risk_factor"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="DiabetesMelilites" name="DiabetesMelilites">
+		  <label class="form-label" for="DiabetesMelilites">Diabetes Melilites</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Hypertension" name="Hypertension">
+		  <label class="form-label" for="Hypertension">Hypertension</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="SmokeHistory" name="SmokeHistory">
+		  <label class="form-label" for="SmokeHistory">Smoking History</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="body_measurement">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_body_measurement"
+        aria-expanded="false"
+        aria-controls="collapse_body_measurement"
+      >
+        Body Measurement
+      </button>
+    </h2>
+    <div
+      id="collapse_body_measurement"
+      class="accordion-collapse collapse"
+      aria-labelledby="body_measurement"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Height" name="Height">
+		  <label class="form-label" for="Height">Height (in cm)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Weight" name="Weight">
+		  <label class="form-label" for="Weight">Weight (in kg)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="BMI" name="BMI">
+		  <label class="form-label" for="BMI">BMI (in kg/m^2)</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <input class="form-control" type="text" id="BloodGlucose" name="BloodGlucose">
+		  <label class="form-label" for="BloodGlucose">Blood Glucose (in mg/dL)</label>
+		</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="meal_plan">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_meal_plan"
+        aria-expanded="false"
+        aria-controls="collapse_meal_plan"
+      >
+        Meal Plan
+      </button>
+    </h2>
+    <div
+      id="collapse_meal_plan"
+      class="accordion-collapse collapse"
+      aria-labelledby="meal_plan"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Breakfast" name="Breakfast">
+		  <label class="form-label" for="Breakfast">Breakfast</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Lunch" name="Lunch">
+		  <label class="form-label" for="Lunch">Lunch</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Dinner" name="Dinner">
+		  <label class="form-label" for="Dinner">Dinner</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Snack" name="Snack">
+		  <label class="form-label" for="Snack">Snack</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:10px">
+		  <textarea class="form-control" rows="6" id="Remark" name="Remark"></textarea>
+		  <label class="form-label" for="Remark">Remark</label>
+		</div>
+		
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

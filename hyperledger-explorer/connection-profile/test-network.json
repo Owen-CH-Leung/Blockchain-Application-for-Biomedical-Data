@@ -1,0 +1,48 @@
+{
+	"name": "test-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "WalesHospitalMSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"hospitalhk": {
+			"peers": {
+				"peer0.WalesHospital.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"WalesHospitalMSP": {
+			"mspid": "WalesHospitalMSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/WalesHospital.com/users/User1@WalesHospital.com/msp/keystore/priv_sk"
+			},
+			"peers": ["peer0.WalesHospital.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/WalesHospital.com/users/User1@WalesHospital.com/msp/signcerts/User1@WalesHospital.com-cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.WalesHospital.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/WalesHospital.com/peers/peer0.WalesHospital.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.WalesHospital.com:7051"
+		}
+	}
+}

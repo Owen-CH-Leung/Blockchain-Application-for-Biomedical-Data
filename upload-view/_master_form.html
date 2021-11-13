@@ -1,0 +1,85 @@
+<!-- master_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />	
+	
+	<title>Master Form (Upload view)</title>
+	<script language="javascript" type="text/javascript">
+	function dynamicdropdown(listindex)
+	{
+		switch (listindex)
+		{
+		case "ah" :
+			document.getElementById("form").options[0]=new Option("Select form","");
+			document.getElementById("form").options[0].style.visibility = 'hidden';
+			document.getElementById("form").options[1]=new Option("Diet Assessment Form","diet");
+			document.getElementById("form").options[2].style.visibility = 'hidden';
+			document.getElementById("form").options[3].style.visibility = 'hidden';
+			document.getElementById("form").options[4].style.visibility = 'hidden';
+			document.getElementById("form").value=0;
+			break;
+		case "nurse" :
+			document.getElementById("form").options[0]=new Option("Select form","");
+			document.getElementById("form").options[0].style.visibility = 'hidden';
+			document.getElementById("form").options[1]=new Option("Vaccination Form for COVID19","vaccine");
+			document.getElementById("form").options[2]=new Option("Registration Form","registration");
+			document.getElementById("form").options[3]=new Option("Nurse Registration","nurseregistration");
+			document.getElementById("form").options[4].style.visibility = 'hidden';
+			document.getElementById("form").value=0;
+			break;
+		case "doctor" :
+			document.getElementById("form").options[0]=new Option("Select form","");
+			document.getElementById("form").options[0].style.visibility = 'hidden';
+			document.getElementById("form").options[1]=new Option("A&E Form","ae");
+			document.getElementById("form").options[2]=new Option("Chest Pain Form","chestpain");
+			document.getElementById("form").options[3]=new Option("PCI Form","pci");
+			document.getElementById("form").options[4]=new Option("Doctor Registration","doctorregistration");
+			document.getElementById("form").value=0;
+			break;
+		}
+		
+		return true;
+	}
+	</script>
+</head>
+	
+
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Master Form (Upload view)</h3>
+		</div>
+
+		<div class="panel panel-default" style="margin-top:30px">
+			<div class="panel-body">			  
+				<form action="http://localhost:8888" method="post">
+					<div class="form-group">
+						<label>Select Role:<br></label>
+							<select id="role" name="role" class="form-control" style="width:360px;" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+								<option value="" disabled selected=True>Select Role</option>
+								<option value="doctor">Doctor</option>
+								<option value="nurse">Nurse</option>
+								<option value="ah">Allied Health</option>
+							</select>
+						
+						<label style="margin-top:10px">Select Form:<br></label>
+							<script type="text/javascript" language="JavaScript">
+								document.write('<select name="form" class="form-control" style="width:360px;" id="form"><option value="" disabled selected=True>Select form</option></select>')
+							</script>
+						
+						<button style="margin-top:50px; width: 360px" type="submit" value="Submit" class="btn btn-block btn-primary" style="">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+</html>

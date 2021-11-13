@@ -1,0 +1,45 @@
+<!-- master_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />	
+	
+	<title>Master Form (Download view)</title>
+</head>
+	
+
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Master Form (Download view)</h3>
+		</div>
+
+		<div class="panel panel-default" style="margin-top:30px">
+			<div class="panel-body">			  
+				<form action="http://localhost:9999" method="post">
+					<div class="form-group">
+						<label>Select Role:</label><br>
+						<select id="role" name="role" class="form-control" style="width:360px;">
+							<option value="" disabled selected=True>Select Role</option>
+							<option value="doctor">Doctor</option>
+							<option value="nurse">Nurse</option>
+							<option value="patient">Patient</option>
+							<option value="researcher">Researcher</option>
+							<option value="insurance">Insurance Practitioner</option>
+							<option value="emergency">Emergency Use</option>
+						</select>
+						<button style="margin-top:50px; width: 360px" type="submit" value="Submit" class="btn btn-block btn-primary" style="">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+</html>

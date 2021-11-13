@@ -1,0 +1,83 @@
+<!-- emergency.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Download Form (Emergency Use)</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+    <script language="javascript" type="text/javascript">
+    function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('type')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+    </script>
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Download Form (<span style="color:red">Emergency Use</span>)
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form enctype="multipart/form-data" action="http://localhost:9999/emergency" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<div class="accordion" id="accordion_group" style="margin-bottom: 50px">
+  <div class="accordion-item" style="width:500px">
+    <h2 class="accordion-header" id="staff_info">
+      <button
+        class="accordion-button show"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#collapse_staff_info"
+        aria-expanded="true"
+        aria-controls="collapse_staff_info"
+      >
+        Input Your Details
+      </button>
+    </h2>
+    <div
+      id="collapse_staff_info"
+      class="accordion-collapse collapse show"
+      aria-labelledby="staff_info"
+      data-mdb-parent="#accordion_group"
+    >
+      <div class="accordion-body">
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="DoctorID" name="DoctorID">
+		  <label class="form-label" for="DoctorID">Doctor ID</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="HKID" name="HKID">
+		  <label class="form-label" for="HKID">Patient's HKID No.</label>
+		</div>
+		<div class="form-outline" style="width:360px; margin-bottom:30px">
+		  <input class="form-control" type="text" id="Email" name="Email">
+		  <label class="form-label" for="Email">Email for receiving the medical record</label>
+		</div>		
+      </div>
+    </div>
+  </div>
+</div>
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 30%">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>

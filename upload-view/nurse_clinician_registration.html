@@ -1,0 +1,50 @@
+<!-- nurse_clinician_registration_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Nurse Registration Form</title>
+
+	<link rel="stylesheet" href="../_style/css/font.css" />
+	<link rel="stylesheet" href="../_style/css/fontawesome.css" />
+	<link rel="stylesheet" href="../_style/css/mdb.min.css" />
+	
+
+</head>
+<body>
+	<div class="container" style="margin-left:15px">
+		<img src="../_style/img/icon.png"></img>
+		<div class="row">
+			  <h3>Nurse Registration Form</h3>
+		</div>
+		<div class="panel panel-default" style="margin-top:10px">
+			<div class="panel-body">
+				<div class="form-group">
+					<form action="http://localhost:8888/nurseregistration" method="post">
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+
+<div class="form-outline" style="width:360px; margin-bottom:30px">
+  <input class="form-control" type="text" id="NurseID" name="NurseID">
+  <label class="form-label" for="NurseID">Nurse ID</label>
+</div>
+<div class="form-outline" style="width:360px; margin-bottom:30px">
+  <input class="form-control" type="text" id="NurseName" name="NurseName">
+  <label class="form-label" for="NurseName">Nurse Name</label>
+</div>		
+
+<!-------------------------------------------------------------------------------------------------------------------  -->			
+<button onclick="alert('Thank you for your submission!')" 
+	type="submit" value="Submit" class="btn btn-block btn-primary" style="width: 360px">Submit</button>    
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../_style/js/mdb.min.js"></script>
+</body>
+
+
+
+</html>
